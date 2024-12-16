@@ -1,46 +1,36 @@
 #include <stdio.h>
-
 #define PI 3.14
-
 struct Rectangle {
     int length;
     int breadth;
     int area;
 };
-
 struct Circle {
     int radius;
     float area;
 };
-
 struct Triangle {
     float base;
     float height;
     float area;
 };
-
 void calculateRectangleArea(struct Rectangle *rect) {
     rect->area = rect->length * rect->breadth;
 }
-
 void calculateCircleArea(struct Circle *circle) {
     circle->area = PI * circle->radius * circle->radius;
 }
-
 void calculateTriangleArea(struct Triangle *triangle) {
     triangle->area = 0.5 * triangle->base * triangle->height;
 }
-
 int main() {
     int choice;
-
     printf("Menu:\n");
     printf("1. Rectangle\n");
     printf("2. Circle\n");
     printf("3. Triangle\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
-
     switch (choice) {
         case 1: {
             struct Rectangle rect;
@@ -70,6 +60,5 @@ int main() {
             printf("Invalid choice\n");
             break;
     }
-
     return 0;
 }
